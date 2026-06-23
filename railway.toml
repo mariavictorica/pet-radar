@@ -1,0 +1,9 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "node dist/main"
+healthcheckPath = "/api/lost-pets"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
