@@ -12,6 +12,7 @@ export const dataSourceOptions: DataSourceOptions = {
   database: envs.DB_NAME,
   username: envs.DB_USER,
   password: envs.DB_PASSWORD,
+  ssl: true,
   entities: [LostPet, FoundPet],
   synchronize: false,
   migrations: ['dist/core/db/migrations/*'],
